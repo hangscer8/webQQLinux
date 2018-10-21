@@ -37,7 +37,7 @@ object QQWeb extends App {
     .map { menu =>
       val menuItem = new MenuItem("refresh")
       menuItem.addActionListener { _ =>
-        browser.loadURL("https://web2.qq.com")
+        Try(browser.loadURL(browser.getURL))
       }
       menu.add(menuItem)
       menu
@@ -57,4 +57,5 @@ object QQWeb extends App {
     .get)
   val systemTray = SystemTray.getSystemTray
   systemTray.add(trayIcon)
+
 }
