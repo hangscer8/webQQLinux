@@ -25,6 +25,7 @@ object QQWeb extends App {
   params.setStorageType(StorageType.DISK)
   val context = new BrowserContext(params)
   val browser = new Browser(BrowserType.LIGHTWEIGHT, context)
+  browser.setAudioMuted(false)
   val view = new BrowserView(browser)
   val jFrame = new JFrame("webQQLinux")
   jFrame.add(view, BorderLayout.CENTER)
@@ -82,5 +83,4 @@ object QQWeb extends App {
     .get)
   val systemTray = SystemTray.getSystemTray
   systemTray.add(trayIcon)
-
 }
