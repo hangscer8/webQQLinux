@@ -1,3 +1,6 @@
+import javafx.application.Application
+import win.hangscer.webQQLinux.QQWebMainApplication
+
 object webQQ extends App {
-  new win.hangscer.webQQLinux.QQWebMain()
+  Application.launch(classOf[QQWebMainApplication])
 }
