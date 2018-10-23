@@ -1,6 +1,7 @@
 package win.hangscer.webQQLinux
 
 import javafx.application.Application
+import javafx.scene.image.Image
 import javafx.scene.web.WebView
 import javafx.scene.{Group, Scene}
 import javafx.stage.Stage
@@ -19,6 +20,7 @@ class QQWebMainApplication extends Application {
     stage.setScene(scene)
     webView.setContextMenuEnabled(false) //右键　网页　菜单　禁止
     webEngine.load("https://web2.qq.com/")
+    stage.getIcons.add(new Image(this.getClass.getResourceAsStream("/img/qq3.png")))
     stage.show()
   }
 }
